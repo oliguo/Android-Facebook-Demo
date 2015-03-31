@@ -1,5 +1,6 @@
 package guo.oli.getfb;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
@@ -8,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -85,22 +87,28 @@ public class MainActivity extends ActionBarActivity {
             loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
                 @Override
                 public void onSuccess(LoginResult loginResult) {
-                    //Toast.makeText(getActivity(), "Login successful" + loginResult.toString(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "Login successful" + loginResult.toString(), Toast.LENGTH_LONG).show();
                 }
 
                 @Override
                 public void onCancel() {
-                   // Toast.makeText(getActivity(), "Login canceled", Toast.LENGTH_SHORT).show();
+                   Toast.makeText(getActivity(), "Login canceled", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void onError(FacebookException exception) {
-                    //Toast.makeText(getActivity(), "Login error"+exception.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Login error"+exception.getMessage().toString(), Toast.LENGTH_SHORT).show();
                 }
             });
 
 
             return view;
+        }
+
+        @Override
+        public void onActivityResult(int requestCode, int resultCode, Intent data) {
+            super.onActivityResult(requestCode, resultCode, data);
+            callbackManager.onActivityResult(requestCode, resultCode, data);
         }
     }
 }
