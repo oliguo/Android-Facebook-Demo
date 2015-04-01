@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,6 +43,11 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+    public void GoWithoutLoginButton(View view){
+        Intent intent=new Intent(this,MainActivity2.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -73,6 +79,7 @@ public class MainActivity extends ActionBarActivity {
         private LoginButton loginButton;
         private CallbackManager callbackManager;
         private TextView textView;
+        private Button button;
 
         public PlaceholderFragment() {
         }
@@ -86,6 +93,7 @@ public class MainActivity extends ActionBarActivity {
 
             callbackManager = CallbackManager.Factory.create();
             textView=(TextView)view.findViewById(R.id.DetailText);
+
             loginButton = (LoginButton) view.findViewById(R.id.login_button);
             //loginButton.setReadPermissions("user_friends");
             loginButton.setReadPermissions(Arrays.asList("public_profile ","user_friends","email"));
@@ -140,5 +148,7 @@ public class MainActivity extends ActionBarActivity {
             super.onActivityResult(requestCode, resultCode, data);
             callbackManager.onActivityResult(requestCode, resultCode, data);
         }
+
+
     }
 }

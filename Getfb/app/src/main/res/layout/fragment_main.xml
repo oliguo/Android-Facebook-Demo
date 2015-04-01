@@ -25,7 +25,7 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout">
 
         <TextView
@@ -35,5 +35,15 @@
             android:text="Large Text"
             android:id="@+id/DetailText" />
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GoWithoutLoginButton"
+        android:id="@+id/CustomButton"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="GoWithoutLoginButton"/>
 
 </RelativeLayout>
