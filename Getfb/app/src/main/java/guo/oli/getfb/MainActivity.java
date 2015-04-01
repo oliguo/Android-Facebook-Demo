@@ -9,14 +9,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+
+import org.json.JSONObject;
+
+import java.util.Arrays;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -32,7 +39,7 @@ public class MainActivity extends ActionBarActivity {
                     .commit();
         }
 
-        
+
     }
 
 
@@ -65,6 +72,7 @@ public class MainActivity extends ActionBarActivity {
 
         private LoginButton loginButton;
         private CallbackManager callbackManager;
+        private TextView textView;
 
         public PlaceholderFragment() {
         }
@@ -77,8 +85,10 @@ public class MainActivity extends ActionBarActivity {
             View view = inflater.inflate(R.layout.fragment_main, container, false);
 
             callbackManager = CallbackManager.Factory.create();
+            textView=(TextView)view.findViewById(R.id.DetailText);
             loginButton = (LoginButton) view.findViewById(R.id.login_button);
-            loginButton.setReadPermissions("user_friends");
+            //loginButton.setReadPermissions("user_friends");
+            loginButton.setReadPermissions(Arrays.asList("public_profile ","user_friends","email"));
             // If using in a fragment
 
             loginButton.setFragment(this);
@@ -89,7 +99,25 @@ public class MainActivity extends ActionBarActivity {
             loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
                 @Override
                 public void onSuccess(LoginResult loginResult) {
-                    Toast.makeText(getActivity(), "Login successful" + loginResult.toString(), Toast.LENGTH_LONG).show();
+
+                    Toast.makeText(getActivity(), "Login successful" + loginResult.getAccessToken().toString(), Toast.LENGTH_LONG).show();
+
+                    GraphRequest request = GraphRequest.newMeRequest(
+                            loginResult.getAccessToken(),
+                            new GraphRequest.GraphJSONObjectCallback() {
+                                @Override
+                                public void onCompleted(
+                                        JSONObject object,
+                                        GraphResponse response) {
+                                    // Application code
+
+                                    textView.setText(response.toString());
+                                }
+                            });
+                    Bundle parameters = new Bundle();
+                    parameters.putString("fields", "id,name,email");
+                    request.setParameters(parameters);
+                    request.executeAsync();
                 }
 
                 @Override
