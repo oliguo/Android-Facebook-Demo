@@ -5,7 +5,7 @@ study  facebook 4.0 android sdk with android studio
 ps:keystore password:123456
 
 #Getfb
-detail:facebook loginbutton and customLoginbutton,get facebookid,user email,etc.
+Detail:include facebook loginbutton and customLoginbutton,try to get facebookid,user email,etc.
 
 ###screenshot
 
