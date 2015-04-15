@@ -5,6 +5,8 @@ study  facebook 4.0 android sdk with android studio
 ps:keystore password:123456
 
 #Getfb
+detail:facebook loginbutton and customLoginbutton,get facebookid,user email,etc.
+
 ###screenshot
 
 <https://github.com/oliguo/android-facebook/tree/master/Getfb/screenshot>
@@ -15,4 +17,5 @@ ps:keystore password:123456
 <img src="https://github.com/oliguo/android-facebook/blob/master/Getfb/screenshot/4.png" width="150"/>
 <img src="https://github.com/oliguo/android-facebook/blob/master/Getfb/screenshot/5.png" width="150"/>
 
+###App Demo <a href="https://github.com/oliguo/android-facebook/blob/master/Getfb/app/app-release.apk">Download and test</a>
 
