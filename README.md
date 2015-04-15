@@ -9,5 +9,6 @@ ps:keystore password:123456
 
 <https://github.com/oliguo/android-facebook/tree/master/Getfb/screenshot>
 
-![Smaller icon](https://github.com/oliguo/android-facebook/blob/master/Getfb/screenshot/1.png)
+<img src="https://github.com/oliguo/android-facebook/blob/master/Getfb/screenshot/1.png" width="300"/>
+
 
