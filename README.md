@@ -7,7 +7,7 @@ study  facebook newest sdk with android studio
 Detail: get facebookid,user email,etc.
 
 ###screenshot
-
+<img src=""/>
 
 ###App Demo <a href="https://github.com/oliguo/android-facebook/blob/master/Getfb/app/app-release.apk">Download and test</a>
 

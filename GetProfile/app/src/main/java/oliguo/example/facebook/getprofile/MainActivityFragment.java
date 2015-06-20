@@ -72,8 +72,7 @@ public class MainActivityFragment extends Fragment {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 Toast.makeText(getActivity(), "Login successful" + loginResult.toString(), Toast.LENGTH_SHORT).show();
-                fetchUserInfo();
-                updateUI();
+
             }
 
             @Override
@@ -114,7 +113,15 @@ public class MainActivityFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        fetchUserInfo();
+        updateUI();
+    }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        fetchUserInfo();
+        updateUI();
     }
 
     @Override
