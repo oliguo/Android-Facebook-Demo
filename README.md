@@ -1,4 +1,4 @@
-# android-facebook
+# android-facebook 4.2
 
 study  facebook newest sdk with android studio
 
@@ -11,3 +11,6 @@ Detail: get facebookid,user email,etc.
 
 ###App Demo <a href="https://github.com/oliguo/android-facebook/blob/master/apk/app-debug.apk">Download and test</a>
 
+###Reference
+
+<a href="https://github.com/facebook/facebook-android-sdk/tree/master/samples/Scrumptious">https://github.com/facebook/facebook-android-sdk/tree/master/samples/Scrumptious</a>
