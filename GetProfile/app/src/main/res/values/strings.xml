@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GetProfile</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="facebook_app_id">1414800938827996</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="MainActivity_fragment_log_in_button">Log in&#8230;</string>
+    <string name="MainActivity_fragment_logged_in">Logged in</string>
+    <string name="MainActivity_fragment_not_logged_in">Not logged in</string>
+</resources>
