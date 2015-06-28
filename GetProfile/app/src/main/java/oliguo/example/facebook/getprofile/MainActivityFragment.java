@@ -90,8 +90,6 @@ public class MainActivityFragment extends Fragment {
         });
 
 
-
-
         return view;
     }
 
