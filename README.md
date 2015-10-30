@@ -1,4 +1,4 @@
-# android-facebook 4.2
+# android-facebook 4.7
 
 study  facebook newest sdk with android studio
 
