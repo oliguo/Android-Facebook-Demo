@@ -3,28 +3,28 @@
 study  facebook newest sdk with android studio
 
 
-#GetProfile
+# GetProfile
 Detail: get facebookid,user email,etc.
 
-###screenshot
+### screenshot
 <img src="https://github.com/oliguo/android-facebook/blob/master/screenshot/H30-U10HuaweiH30-U10vtl-solutionsltd06202015235357.gif" width="250"/>
 
-###App Demo <a href="https://github.com/oliguo/android-facebook/blob/master/apk/GetProfile.apk">Download and test</a>
+### App Demo <a href="https://github.com/oliguo/android-facebook/blob/master/apk/GetProfile.apk">Download and test</a>
 
-###Reference
+### Reference
 
 <a href="https://github.com/facebook/facebook-android-sdk/tree/master/samples/Scrumptious">https://github.com/facebook/facebook-android-sdk/tree/master/samples/Scrumptious</a>
 
-#CustomizedButton
+# CustomizedButton
 Detail: customize button by loginManager without facebook loginbutton to get basic profile
 
 
-###screenshot
+### screenshot
 <img src="https://github.com/oliguo/android-facebook/blob/master/screenshot/H30-U10HuaweiH30-U10vtl-solutionsltd06282015223240.gif" width="250"/>
 
-###App Demo <a href="https://github.com/oliguo/android-facebook/blob/master/apk/CustomizedButton.apk">Download and test</a>
+### App Demo <a href="https://github.com/oliguo/android-facebook/blob/master/apk/CustomizedButton.apk">Download and test</a>
 
-###Reference
+### Reference
 
 Button style from <a href="https://github.com/rey5137/material">rey5137/material</a>
 
